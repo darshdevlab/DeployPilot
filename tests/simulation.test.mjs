@@ -35,6 +35,8 @@ const landingJs = readFileSync(new URL("../app.js", import.meta.url), "utf8");
 
 assert.ok(indexHtml.includes("simulationModal"), "Landing page should contain popup simulation modal");
 assert.ok(indexHtml.includes("modal-backdrop"), "Landing page should contain popup backdrop");
+assert.ok(indexHtml.includes("Explore My Portfolio"), "Landing page should link to the portfolio");
+assert.ok(indexHtml.includes("https://github.com/darshdevlab/DeployPilot"), "Landing page should link to GitHub");
 assert.ok(indexHtml.includes('id="modalCloseButton"'), "Popup card should include a top-right close button");
 assert.ok(indexHtml.includes('id="detailsStep"'), "Popup card should include project details");
 assert.equal(indexHtml.includes("GitHub-style simulation run"), false, "Landing popup should not include run logs");
@@ -47,6 +49,7 @@ assert.ok(simulationHtml.includes('id="simulationPage"'), "Simulation should ren
 assert.ok(simulationHtml.includes('id="runButton"'), "Simulation page should include Run Simulation");
 assert.ok(simulationHtml.includes("GitHub-style simulation run"), "Simulation page should include GitHub-style results");
 assert.ok(simulationHtml.includes("Google Gemma 2 9B IT (free)"), "Simulation page should use real free model names");
+assert.ok(simulationHtml.includes("Explore My Portfolio"), "Simulation page should keep the portfolio link");
 assert.ok(simulationHtml.includes("&larr; Return To Projects"), "Simulation page should show a clear return link");
 assert.equal(simulationHtml.includes(">Projects</a>"), false, "Simulation page should not label the return link Projects");
 

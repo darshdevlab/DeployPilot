@@ -107,9 +107,55 @@ button {
   font-weight: 700;
 }
 
-.titlebar-action:hover {
+.titlebar-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.titlebar-button {
+  min-height: 40px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--text);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 13px;
+  text-decoration: none;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.titlebar-button.accent {
+  border-color: rgba(71, 213, 196, 0.48);
+  background: rgba(71, 213, 196, 0.1);
+  color: var(--teal);
+}
+
+.titlebar-button svg {
+  width: 17px;
+  height: 17px;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.titlebar-action:hover,
+.titlebar-button:hover {
   color: var(--text);
   border-color: rgba(71, 213, 196, 0.58);
+}
+
+.titlebar-button.accent:hover {
+  color: var(--text);
+  background: rgba(71, 213, 196, 0.18);
 }
 
 .nav-stack {
@@ -1052,7 +1098,23 @@ button:disabled {
   }
 
   .app-titlebar {
+    align-items: flex-start;
+    flex-direction: column;
     padding: 14px 16px;
+  }
+
+  .titlebar-actions {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .titlebar-button,
+  .titlebar-action {
+    min-height: 38px;
+  }
+
+  .titlebar-button span {
+    white-space: normal;
   }
 
   .simulation-workspace {
