@@ -4,7 +4,6 @@ AI DevOps control-plane simulation for portfolio demos.
 
 **Explore Prototype:** [deploypilot.darshdave.com](https://deploypilot.darshdave.com/)  
 **Portfolio:** [darshdave.com](https://darshdave.com/)  
-**Repository:** [github.com/darshdevlab/DeployPilot](https://github.com/darshdevlab/DeployPilot)
 
 DeployPilot opens with a Harness simulation-project selector, then lets visitors run the selected DevOps flow. The simulator asks a tester for an email address, runs a Harness-style CI/CD simulation, generates an AI-style analysis, and saves run history. The MVP is static and Vercel-ready, with Supabase persistence available through the included schema and `config.js`.
 
