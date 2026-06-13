@@ -2,7 +2,7 @@
 
 AI DevOps control-plane simulation for portfolio demos.
 
-**Live website:** [deploypilot.darshdave.com](https://deploypilot.darshdave.com/)  
+**Explore Prototype:** [deploypilot.darshdave.com](https://deploypilot.darshdave.com/)  
 **Portfolio:** [darshdave.com](https://darshdave.com/)  
 **Repository:** [github.com/darshdevlab/DeployPilot](https://github.com/darshdevlab/DeployPilot)
 
