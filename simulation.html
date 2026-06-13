@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DeployPilot Simulation</title>
+    <meta name="description" content="AI DevOps simulation run page">
+    <link rel="stylesheet" href="./styles.css?v=20260613-pageflow2">
+    <script src="./config.js"></script>
+    <script type="module" src="./simulation.js?v=20260613-pageflow2"></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="app-titlebar">
+        <a class="brand-mark" href="./" aria-label="DeployPilot home">
+          <span class="brand-icon">DP</span>
+          <strong>DeployPilot</strong>
+        </a>
+        <a class="titlebar-action" href="./">&larr; Return To Projects</a>
+      </header>
+
+      <main class="workspace simulation-workspace">
+        <section class="simulation-page" id="simulationPage">
+          <div class="simulation-page-grid">
+            <section class="modal-setup simulation-setup" id="setupStep">
+              <p class="eyebrow">Harness project simulation</p>
+              <h1 id="modalProjectName">DeployGuard</h1>
+              <p class="scenario-copy" id="modalProjectType">Harness CI/CD</p>
+
+              <div class="modal-section">
+                <label class="field-label">Simulation option</label>
+                <div class="segmented modal-segmented" id="scenarioTabs"></div>
+              </div>
+
+              <div class="modal-section">
+                <label class="field-label" for="emailInput">Email ID</label>
+                <input id="emailInput" name="email" type="email" autocomplete="off" required>
+              </div>
+
+              <div class="modal-section">
+                <label class="field-label" for="modelSelect">Free model option</label>
+                <select id="modelSelect" name="model">
+                  <option value="llama-3-1-8b-free">Meta Llama 3.1 8B Instruct (free)</option>
+                  <option value="gemma-2-9b-free">Google Gemma 2 9B IT (free)</option>
+                  <option value="mistral-7b-free">Mistral 7B Instruct (free)</option>
+                </select>
+              </div>
+
+              <div class="modal-actions">
+                <button class="primary-button" id="runButton" type="button">Run Simulation</button>
+              </div>
+
+              <p class="modal-status" id="modalRunStatus">Enter email, choose an option, then run simulation.</p>
+            </section>
+
+            <section class="modal-results simulation-results is-hidden" id="resultsStep">
+              <div class="panel-head compact">
+                <div>
+                  <p class="eyebrow">GitHub-style simulation run</p>
+                  <h2 id="scenarioTitle">React Golden Deploy</h2>
+                </div>
+                <div class="run-badge" id="runBadge">Ready</div>
+              </div>
+
+              <p class="scenario-copy" id="scenarioDescription"></p>
+
+              <div class="github-run-layout">
+                <aside class="github-jobs">
+                  <div class="github-section-head">
+                    <span>Jobs</span>
+                    <strong id="durationLabel">0s</strong>
+                  </div>
+                  <div class="pipeline-flow compact-flow github-job-list" id="pipelineFlow"></div>
+                </aside>
+
+                <div class="log-shell github-log-shell">
+                  <div class="log-head">
+                    <span>Run logs</span>
+                    <span>Harness simulation</span>
+                  </div>
+                  <pre id="logOutput">Run simulation first.</pre>
+                </div>
+              </div>
+
+              <div class="github-section-head insight-head">
+                <span>AI suggestion and insight</span>
+              </div>
+
+              <div class="insight-grid">
+                <div class="insight-card">
+                  <span>AI suggestion</span>
+                  <strong id="analysisHeadline">Ready</strong>
+                </div>
+                <div class="insight-card">
+                  <span>Confidence</span>
+                  <strong id="confidenceRing">--</strong>
+                </div>
+                <div class="insight-card">
+                  <span>Root cause</span>
+                  <p id="rootCause">No run selected.</p>
+                </div>
+                <div class="insight-card">
+                  <span>Insight</span>
+                  <p id="recommendation">Choose a simulation and run it.</p>
+                </div>
+                <div class="insight-card">
+                  <span>Fix</span>
+                  <p id="fixText">No fix generated yet.</p>
+                </div>
+                <div class="insight-card">
+                  <span>Impact</span>
+                  <p id="impactText">No impact calculated yet.</p>
+                </div>
+              </div>
+            </section>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
